@@ -71,7 +71,7 @@ class WP_Plugin_Boilerplate
         add_action('rest_api_init', [$this, 'register_rest_api_endpoints']);
     }
 
-    private function plugin_script_style($hook)
+    public function plugin_script_style($hook)
     {
         if ($hook != 'toplevel_page_wp_plugin_settings') {
             return;
@@ -85,7 +85,7 @@ class WP_Plugin_Boilerplate
     }
 
     // Adds the plugin's admin menu page
-    private function add_admin_menu()
+    public function add_admin_menu()
     {
         // error_log('Adding admin menu');
         add_menu_page(
@@ -98,7 +98,7 @@ class WP_Plugin_Boilerplate
     }
 
     // Registers the plugin's settings with validation callback and default values
-    private function register_settings()
+    public function register_settings()
     {
         // error_log('Registering settings');
         register_setting('wp_plugin_settings_group', $this->option_name, [
