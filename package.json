@@ -1,0 +1,21 @@
+{
+  "name": "test-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "preline": "^2.5.1",
+    "tailwindcss": "^3.4.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.9"
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i ./main.css -o ./dist/plugin-settings.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

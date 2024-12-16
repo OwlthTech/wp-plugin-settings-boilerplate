@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    input[type=checkbox], input[type=radio] {
+        @apply relative w-[3.25rem] h-7 p-px bg-gray-200 border-transparent text-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:ring-[#2271b1] disabled:opacity-50 disabled:pointer-events-none checked:bg-none checked:text-[#2271b1] checked:border-[#2271b1] focus:checked:border-[#2271b1] border-gray-400 checked:bg-[#2271b1] focus:ring-offset-gray-600 before:inline-block before:size-6 before:translate-x-0 checked:before:translate-x-full before:rounded-full before:shadow before:transform before:ring-0 before:transition before:ease-in-out before:duration-200 before:bg-neutral-400 checked:before:bg-blue-200 checked:before:m-0 !important;
+        text-align: unset !important;
+    }
+}
+
+@layer utilities {
+    .plugin-settings-notice {
+        padding: 12px;
+        border: 0.5px solid #46b450;
+        border-left: 4px solid #46b450;
+        background-color: #e7f5e7;
+        color: #32373c;
+        font-size: 16px;
+        margin-top: 1rem;
+        border-radius: 4px;
+        position: relative;
+    }
+    
+    .plugin-settings-notice .notice-dismiss {
+        position: absolute;
+        right: 8px;
+        background: none;
+        height: 100%;
+        border: none;
+        cursor: pointer;
+        color: #72777c;
+        font-size: 1rem;
+    }
+    .plugin-settings-notice .notice-dismiss:hover {
+        color: #2271b1;
+    }
+    
+}
